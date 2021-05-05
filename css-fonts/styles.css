@@ -1,8 +1,8 @@
 body {
   font-family: 'Girassol', cursive;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Shadows Into Light', cursive;
 }
