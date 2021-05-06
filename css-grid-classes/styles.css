@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
 }
 
-.whole {
+.container {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -17,6 +17,10 @@ img {
 
 .one-third {
   flex-basis: calc(100% / 3);
+}
+
+.one-fourth {
+  flex-basis: calc(100% / 4);
 }
 
 .two-thirds {
