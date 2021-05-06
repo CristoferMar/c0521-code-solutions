@@ -9,6 +9,8 @@ h2 {
   color: #ec5d57;
   font-family: AtlasGrotesk, sans-serif;
   font-size: 0.9rem;
+  letter-spacing: 0.075rem;
+  font-weight: 700;
 }
 
 .fill {
@@ -27,15 +29,19 @@ label {
   font-weight: 575;
   padding-left: 0.65rem;
   font-size: 0.7rem;
+  line-height: 0.5rem;
 }
 
 .submit {
-  float: right;
   padding: 0.5rem 1.2rem;
   border-radius: 100px;
   color: white;
   background-color: #ec5d57;
   border: 0;
+}
+
+.sub-btn {
+  text-align: end;
 }
 
 ::placeholder {
