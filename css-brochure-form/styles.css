@@ -1,4 +1,4 @@
-div {
+.container {
   width: 50%;
   margin: auto;
 }
@@ -47,4 +47,8 @@ label {
 ::placeholder {
   padding-left: 0.45rem;
   color: #e0e1e1;
+}
+
+div {
+  padding-bottom: 0.8rem;
 }
