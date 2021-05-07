@@ -27,8 +27,8 @@ body {
   justify-content: space-between;
 }
 
-.one-fourth {
-  flex-basis: calc(30%);
+.one-third {
+  flex-basis: 30%;
 }
 
 .img-cont {
@@ -60,4 +60,5 @@ p {
   max-width: 90%;
   margin: auto;
   font-size: 0.75rem;
+  color: #ddd;
 }
