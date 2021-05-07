@@ -17,10 +17,13 @@ body {
 .row {
   display: flex;
   letter-spacing: 0.1rem;
+}
+
+.justify-center {
   justify-content: center;
 }
 
-.row2 {
+.justify-space-between {
   justify-content: space-between;
 }
 
