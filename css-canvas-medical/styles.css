@@ -7,14 +7,19 @@ body {
   margin: auto;
 }
 
-.width-lim {
+.row > div {
   width: 85%;
   margin: auto;
 }
 
 .nav-row {
   border-bottom: 2px solid #fafafa;
-  padding: 0.7rem 0;
+  padding: 1rem 0;
+}
+
+.nav-row > div {
+  width: 85%;
+  margin: auto;
 }
 
 .flex-between {
@@ -22,7 +27,7 @@ body {
   justify-content: space-between;
 }
 
-.nav-logo {
+.logo {
   height: 1.8rem;
 }
 
@@ -37,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-.nav-btn {
+.nav-btn a {
   padding: 0.775rem 1.2rem;
   font-size: 0.9rem;
 }
@@ -52,14 +57,45 @@ a {
   border-radius: 5px;
 }
 
-.row {
-  padding: 40px 0;
+.reg-padding {
+  padding: 60px 0;
 }
 
 /* Hero */
 
+.hero-banner {
+  background-color: #6e6e6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 530px;
+}
+
 .hero {
+  filter: opacity(60%);
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-half {
+  width: 47.5%;
+  position: absolute;
+  left: 5rem;
+  top: 10%;
+}
+
+h1 {
+  font-family: 'Tiempos Headline', Times, serif;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 0;
+}
+
+.mrgn-botm {
+  margin-bottom: 8%;
 }
 
 /* endorsment and location */
@@ -71,34 +107,43 @@ a {
 .center-grey {
   display: flex;
   justify-content: center;
-  color: #808080;
+  color: #6e6e6e;
   text-align: center;
   max-width: 37%;
-  line-height: 1.9rem;
+}
+
+p {
+  line-height: 1.8rem;
+  margin-bottom: 0;
 }
 
 h2 {
   font-family: 'Tiempos Headline', Times, serif;
   font-size: 1.9rem;
   font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin: 0;
 }
 
 .flex-wrap {
   display: flex;
   justify-content: space-between;
-  color: #808080;
-  line-height: 1.9rem;
+  color: #6e6e6e;
   flex-wrap: wrap;
 }
 
-.content-center {
-  text-align: center;
-}
-
-.half {
+.half-center h3 {
   width: 50%;
   font-size: 1.3rem;
   font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
 .align-center {
@@ -107,5 +152,54 @@ h2 {
 
 .large-btn {
   font-size: 1.3rem;
-  padding: 1rem 2.7rem;
+  padding: 0.9rem 2.7rem;
+}
+
+.grey-font * {
+  color: #6e6e6e;
+}
+
+.paddingborder-bottom {
+  padding-bottom: 5.4rem;
+  padding-top: 25px;
+  border-bottom: 1px solid #e7e9ec;
+}
+
+.full-darkgrey {
+  background-color: #525351;
+  padding-top: 110px;
+  padding-bottom: 105px;
+}
+
+.white-font * {
+  color: white;
+}
+
+.flex-column div {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+}
+
+.logo-margin {
+  padding-top: 1.8rem;
+}
+
+.half-small {
+  width: 49%;
+}
+
+.less-margin h3 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.small-padding {
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.foot-width {
+  width: 24%;
 }
