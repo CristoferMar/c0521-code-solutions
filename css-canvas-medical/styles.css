@@ -61,8 +61,6 @@ a {
   padding: 60px 0;
 }
 
-/* Hero */
-
 .hero-banner {
   background-color: #6e6e6e;
   display: flex;
@@ -97,8 +95,6 @@ h1 {
 .mrgn-botm {
   margin-bottom: 8%;
 }
-
-/* endorsment and location */
 
 .full-lightgrey {
   background-color: #fafafa;
