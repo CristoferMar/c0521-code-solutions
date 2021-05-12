@@ -1,0 +1,39 @@
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  font-family: 'Barlow', sans-serif;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.flexColumn-fourth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin: 0 1.75%;
+}
+
+.phoneImg {
+  width: 100%;
+}
+
+.iconImg {
+  width: 24.5%;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 0.9rem;
+}
