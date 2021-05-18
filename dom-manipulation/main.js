@@ -3,7 +3,7 @@ var clicks = 0;
 var $hotButton = document.querySelector('.hot-button');
 var $clickCount = document.querySelector('.click-count');
 
-function addClicks() {
+function addClicks(event) {
   clicks++;
   $clickCount.textContent = 'Clicks: ' + clicks;
 
