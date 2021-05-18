@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.day {
+  background-color: white;
+}
+
+.night {
+  background-color: rgb(19, 19, 19);
+}
+
+div {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+}
+
+.light {
+  background-color: yellow;
+  box-shadow: 0 0 30px 5px rgb(248, 248, 61);
+}
+
+.dark {
+  background-color: rgb(54, 54, 54);
+  box-shadow: 0 -10px 3px 5px black;
+}
