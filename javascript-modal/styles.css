@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+
+h3 {
+  font-weight: 750;
+  margin-top: 0;
+}
+
+.btnSize {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  box-shadow: 0 3px 5px 1px rgba(170, 170, 170, 0.51);
+}
+
+.btnBlue {
+  background-color: rgb(75, 75, 255);
+  max-width: 155px;
+  text-align: center;
+  transform: translate(5px, 5px);
+}
+
+.display-none {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: auto;
+  left: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 155px);
+}
+
+.modalContent {
+  box-shadow: 0 0 0 9000px rgba(0, 0, 0, 0.678);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 40px 10px;
+  border-radius: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+}
+
+.modal > * {
+  width: 340px;
+}
+
+.btnRed {
+  background-color: rgb(255, 57, 57);
+}
