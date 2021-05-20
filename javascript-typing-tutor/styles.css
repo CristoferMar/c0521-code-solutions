@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arvo', serif;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  letter-spacing: 0.05rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.next {
+  padding-bottom: 1px;
+  border-bottom: 2px solid black;
+}
+
+.passed {
+  color: green;
+}
+
+.stuck {
+  color: red;
+  padding-bottom: 1px;
+  border-bottom: 2px solid red;
+}
+
+.displayNone {
+  display: none;
+}
+
+.celebrate {
+  background-color: darkgoldenrod;
+}
