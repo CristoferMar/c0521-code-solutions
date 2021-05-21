@@ -23,8 +23,8 @@ var stingLibrary = JSON.stringify(library);
 console.log('stingLibrary:', stingLibrary);
 console.log('stingLibrary Typeof:', typeof (library));
 
-var student = JSON.stringify({ ID: '1185', name: 'Jimmy John' });
-console.log('student:', student);
+var student = '{"ID":"1185","name":"Jimmy John"}';
+console.log('student in manual JSON format:', student);
 console.log('student Typeof:', typeof (student));
 
 var newStudent = JSON.parse(student);
