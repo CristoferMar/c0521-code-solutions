@@ -5,7 +5,7 @@ var $tabContainer = document.querySelector('.tab-container');
 $tabContainer.addEventListener('click', tabHandler);
 
 function tabHandler(event) {
-  if (!event.target.matches('.tab')) {
+  if (event.target.matches('.tab') === false) {
     return;
   }
   for (var i = 0; i < $tabs.length; i++) {
