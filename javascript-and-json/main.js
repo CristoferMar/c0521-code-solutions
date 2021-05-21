@@ -1,16 +1,16 @@
 var library = [
   {
-    isbn: '123',
+    isbn: 123,
     title: 'Amazing Ants',
     author: 'Amy A'
   },
   {
-    isbn: '456',
+    isbn: 456,
     title: 'Bewidering Beasts',
     author: 'Billy B'
   },
   {
-    isbn: '789',
+    isbn: 789,
     title: 'Challenging Cheetas',
     author: 'Charly C'
   }
@@ -23,7 +23,7 @@ var stingLibrary = JSON.stringify(library);
 console.log('stingLibrary:', stingLibrary);
 console.log('stingLibrary Typeof:', typeof (library));
 
-var student = '{"ID":"1185","name":"Jimmy John"}';
+var student = '{"ID":1185,"name":"Jimmy John"}';
 console.log('student in manual JSON format:', student);
 console.log('student Typeof:', typeof (student));
 
