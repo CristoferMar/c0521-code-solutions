@@ -27,7 +27,8 @@
 //                   concatinate
 
 function titleCase(title) {
-  // debugger;
+  var noCaps = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
+
   var splitArray = title.toLowerCase();
   splitArray = splitArray.split(' ');
   var newTitle = '';
@@ -64,24 +65,7 @@ function titleCase(title) {
       subHead = 1;
       currentWord = capWord(currentWord);
 
-    } else if (
-      currentWord !== 'and' &&
-      currentWord !== 'or' &&
-      currentWord !== 'nor' &&
-      currentWord !== 'but' &&
-      currentWord !== 'a' &&
-      currentWord !== 'an' &&
-      currentWord !== 'the' &&
-      currentWord !== 'as' &&
-      currentWord !== 'at' &&
-      currentWord !== 'by' &&
-      currentWord !== 'for' &&
-      currentWord !== 'in' &&
-      currentWord !== 'of' &&
-      currentWord !== 'on' &&
-      currentWord !== 'per' &&
-      currentWord !== 'to'
-    ) {
+    } else if (noCaps.indexOf(currentWord) < 0) {
       currentWord = capWord(currentWord);
     }
 
