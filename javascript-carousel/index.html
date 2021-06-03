@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="carosel">
+      <div class="arrows last"><i class="large-font fas fa-chevron-left"></i></div>
+
+      <div class="imgSwap">
+        <div class="main-img">
+          <img data-view="1" class="view" src="images/001.png" alt="bulbasaur">
+          <img data-view="2" class="view hidden" src="images/004.png" alt="charmander">
+          <img data-view="3" class="view hidden" src="images/007.png" alt="squirtle">
+          <img data-view="4" class="view hidden" src="images/025.png" alt="pickachu">
+          <img data-view="5" class="view hidden" src="images/039.png" alt="jigglypuff">
+        </div>
+        <div class="crcl-nav">
+          <i data-view="1" class="circle-btn fas fa-circle"></i>
+          <i data-view="2" class="circle-btn far fa-circle"></i>
+          <i data-view="3" class="circle-btn far fa-circle"></i>
+          <i data-view="4" class="circle-btn far fa-circle"></i>
+          <i data-view="5" class="circle-btn far fa-circle"></i>
+        </div>
+      </div>
+
+      <div class="arrows next"><i class="large-font fas fa-chevron-right"></i></div>
+
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
