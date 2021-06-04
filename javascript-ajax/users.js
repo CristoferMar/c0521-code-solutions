@@ -1,4 +1,4 @@
-var $userList = document.getElementById('user-list');
+var $userList = document.querySelector('#user-list');
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
