@@ -7,8 +7,8 @@ xhr.addEventListener('load', showReturn);
 xhr.send();
 
 function showReturn() {
-  console.log(xhr);
-  console.log(xhr.response);
+  console.log('xhr:', xhr);
+  console.log('xhr.response:', xhr.response);
   for (var i = 0; i < xhr.response.length; i++) {
     var $li = document.createElement('li');
     $li.textContent = xhr.response[i].name;
