@@ -1,0 +1,452 @@
+    1  git config --global user.name "CristoferMar"
+    2  git config --global user.email "cristoferm@gmail.com"
+    3  git config --global --list
+    4  pwd
+    5  ls
+    6  cd repos
+    7  ls
+    8  pwd
+    9  cd .. cd..
+   10  cd ..
+   11  ls
+   12  cd ..
+   13  ls
+   14  cd ..
+   15  ls
+   16  pwd
+   17  cd repos
+   18  ls
+   19  cd c0521-code-solutions/
+   20  git status
+   21  git checkout -b http-messages
+   22  ls
+   23  pwd
+   24  ls
+   25  cd http-messages/
+   26  pwd
+   27  clear
+   28  http httpie.io/hello
+   29  http --help
+   30  pwd
+   31  http GET pie.http://example.com
+   32  http GET http://example.com
+   33  http GET -v http://example.com
+   34  http GET  http://example.com -v
+   35  http GET --verbose http://example.com
+   36  http --verbose http://example.com
+   37  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   38  http --body GET http://example.com > index.html
+   39  git status
+   40  git add .
+   41  git status
+   42  git commit -m 'http-messages | Cristofer Martinez'
+   43  git push origin http-messages
+   44  http http://example.com
+   45  http --verbose http://example.com
+   46  http google.com
+   47  http http://www.google.com/
+   48  git checkout master
+   49  git pull origin master
+   50  pwd
+   51  cd ..
+   52  git checkout -b javascript-ajax
+   53  git status
+   54  git add .
+   55  git status
+   56  git commit -m 'javascript-ajax | Cristofer Martinez'
+   57  git push origin javascript-ajax
+   58  git status
+   59  git add .
+   60  git commit -m 'javascript-ajax | Cristofer Martinez'
+   61  git push origin javascript-ajax
+   62  git checkout master
+   63  git pull origin master
+   64  git restore origin master
+   65  git restore master
+   66  git status
+   67  git checkout javascript-ajax 
+   68  git status
+   69  git add .
+   70  git status
+   71  git commit -m 'updated getElement to querySelector for uder-list'
+   72  git push origin javascript-ajax
+   73  curl "https://api.edamam.com/search?q=chicken&app_id=$9ec5c88b&app_key=$430de82e41f22f5ce9234ba4f570d5ba&from=0&to=3&calories=591-722&health=alcohol-free"
+   74  cd repos
+   75  ls
+   76  git clone git@github.com:CristoferMar/ajax-project.git
+   77  npm ci
+   78  ls
+   79  cs ajax-project/
+   80  npm ci
+   81  cd ajax-project/
+   82  npm ci
+   83  pwd
+   84  cd ..
+   85  cd
+   86  ls
+   87  cd repos
+   88  ls
+   89  cd a
+   90  cd ajax-project/
+   91  git pull origin master
+   92  git checkout -b issue-1-user-can-access-drinks-or-food-search
+   93  git stus
+   94  git status
+   95  git add .
+   96  git status
+   97  git commit -m 'issue-1 | in progress'
+   98  git status
+   99  git add .
+  100  git status
+  101  git commit -m 'issue-1 | in progress'
+  102  git push origin issue-1-user-can-access-drinks-or-food-search
+  103  git staus
+  104  git status
+  105  git add .
+  106  git status
+  107  git commit -m "feature 1 in progress"
+  108  git commit -m "feature 1 in progress" --no-verify
+  109  git push origin issue-1-user-can-access-drinks-or-food-search
+  110  git status
+  111  git add js/main.js 
+  112  git status
+  113  git commit -m 'Make “Drinks” & “Meals” buttons'
+  114  git commit -m 'Make “Drinks” & “Meals” buttons' --no-verify
+  115  git push origin issue-1-user-can-access-drinks-or-food-search
+  116  git status
+  117  git add css/styles.css 
+  118  git add js/main.js 
+  119  git status
+  120  git commit -m ' Make these buttons “toggleable” to switch between color and API'
+  121  git commit -m ' Make these buttons “toggleable” to switch between color and API' --no-verify
+  122  git push origin issue-1-user-can-access-drinks-or-food-search
+  123  git status
+  124  git add .
+  125  git status
+  126  git commit -m 'issue-1 in progress' --no-verify
+  127  git push origin issue-1-user-can-access-drinks-or-food-search
+  128  git status
+  129  git add .
+  130  git status
+  131  git commit -m 'issue-1-user-can-access-drinks-or-food-search | Cristofer Martinez'
+  132  git status
+  133  git add js/main.js 
+  134  git status
+  135  git commit -m 'issue-1-user-can-access-drinks-or-food-search | Cristofer Martinez'
+  136  git push origin issue-1-user-can-access-drinks-or-food-search
+  137  git status
+  138  git add css/styles.css 
+  139  git add index.html 
+  140  git add js/main.js 
+  141  git status
+  142  git commit -m 'issue-1-user-can-access-drinks-or-food-search | Added buttonsor a tags to all clickable items(other than my options)'
+  143  git push origin issue-1-user-can-access-drinks-or-food-search
+  144  git status
+  145  git add index.html 
+  146  git add js/main.js 
+  147  git commit -m 'resolved refresh onto other DB bug'
+  148  git push origin issue-1-user-can-access-drinks-or-food-search
+  149  pwd
+  150  cd repos
+  151  ls
+  152  cd ajax-project/
+  153  git status
+  154  git add js/main.js 
+  155  git commit -m 'corrected thumb and noResults generators to return value, as opposed to posting directly to DOM'
+  156  git push origin issue-1-user-can-access-drinks-or-food-search
+  157  git status
+  158  git checkout master
+  159  git pull origin master
+  160  git checkout -b Issue-2-user-can-search-random-recipes
+  161  git status
+  162  git add js/main.js 
+  163  git status
+  164  git commit -m ' Unlike the search form, If the random button is hit, clear the searched the HTML and DATA manually'
+  165  git push origin Issue-2-user-can-search-random-recipes
+  166  git status
+  167  git add css/styles.css 
+  168  git add index.html 
+  169  git add js/main.js 
+  170  git status
+  171  git commit -m 'Remove all buttons and placeholders that do not serve the functionality of the feature'
+  172  git push origin Issue-2-user-can-search-random-recipes
+  173  git status
+  174  git add js/main.js 
+  175  git status
+  176  git commit -m 'If random is clicked, reset search bar'
+  177  git push origin Issue-2-user-can-search-random-recipes
+  178  git status
+  179  git add js/main.js 
+  180  git status
+  181  git commit -m 'Issue-2-user-can-search-random-recipes | Cristofer Martinez'
+  182  git checkout master
+  183  git pull origin master
+  184  git checkout master
+  185  git pull origin master
+  186  git checkout -b Issue-3-User-can-save-or-remove-recipes-from-bookmarked
+  187  git status
+  188  git add css/styles.css 
+  189  git add index.html 
+  190  git add js/main.js 
+  191  git status
+  192  git commit -m 'Remove the ID of selected item from appropriate bookmarked array'
+  193  git status
+  194  git add js/main.js 
+  195  git commit -m 'Remove the ID of selected item from appropriate bookmarked array'
+  196  git status
+  197  git add index.html 
+  198  git add js/main.js 
+  199  git status
+  200  git commit -m git status
+  201  git status
+  202  git add css/styles.css 
+  203  git commit -m 'Issue-3-User-can-save-or-remove-recipes-from-bookmarked'
+  204  git push origin Issue-3-User-can-save-or-remove-recipes-from-bookmarked
+  205  git status
+  206  git add css/styles.css 
+  207  git add
+  208  git add index.html 
+  209  git add js
+  210  git status
+  211  git commit -m 'Updated style class names to lower case'
+  212  git push origin Issue-3-User-can-save-or-remove-recipes-from-bookmarked
+  213  git status
+  214  git add js/main.js 
+  215  git status
+  216  git commit -m 'Issue-3-User-can-save-or-remove-recipes-from-bookmarked'
+  217  git push origin Issue-3-User-can-save-or-remove-recipes-from-bookmarked
+  218  git checkout master
+  219  git checkout -b Issue-4-User-can-save-recipes-to-Loved-list
+  220  git status
+  221  git pull origin master
+  222  git status
+  223  git add js/main.js 
+  224  git commit -m 'Issue-4-User-can-save-recipes-to-Loved-list'
+  225  git push origin Issue-4-User-can-save-recipes-to-Loved-list
+  226  git checkout master
+  227  git pull origin master
+  228  git status
+  229  git add images/mysteryBox.svg 
+  230  git add index.html 
+  231  git add js/main.js 
+  232  git status
+  233  git commit -m 'tobble DB now swaps navigation buttons data-view attribute' --no-verify
+  234  git checkout -b Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  235  git status
+  236  git commit -m 'tobble DB now swaps navigation buttons data-view attribute' --no-verify
+  237  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  238  git status
+  239  git add index.html 
+  240  git add js/data.js 
+  241  git add js/main.js 
+  242  git status
+  243  git commit -m 'If they go to a different page, swap views'
+  244  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  245  git status
+  246  git add css/styles.css 
+  247  git add index.html 
+  248  git add js/main.js 
+  249  git status
+  250  git commit -m 'bookmarked and loved thumbs fluidly get added or removed from ether list'
+  251  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  252  git status
+  253  git add index.html 
+  254  git add css/styles.css 
+  255  git add js/main.js 
+  256  git status
+  257  git commit -m 'bookmarked and loved pages display "no results" if the lists are empty or have been empied'
+  258  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  259  git status
+  260  git add index.html 
+  261  git add js/data.js 
+  262  git add js/main.js 
+  263  git status
+  264  git commit -m 'loved or bookmarked content is now stored as small infomration in data, to be reconstructed later'
+  265  git add js/main.js 
+  266  git status
+  267  git commit -m 'loved or bookmarked content is now stored as small infomration in data, to be reconstructed later'
+  268  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  269  git status
+  270  git add js/main.js 
+  271  git commit -m 'users can refresh and instantly see their previosu bookmarks or loved'
+  272  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  273  git status
+  274  git add js/main.js 
+  275  git status
+  276  git commit -m 'Make sure that all click targets show a cursor: pointer when hovered with the mouse'
+  277  git status
+  278  git add js/main.js 
+  279  git status
+  280  git commit -m 'resolved loading bug where alternate DB reload were inheriting initial DB style properties'
+  281  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  282  git status
+  283  git add js/main.js 
+  284  git commit -m 'grouped similar codes into recyclable functions'
+  285  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  286  git status
+  287  git add js/main.js 
+  288  git commit -m 'moved functions to global scope'
+  289  git status
+  290  git commit -m 'moved additional functions to global scope'
+  291  git push origin Issue-5-User-can-view-their-Loved-and-Bookmarked-lists
+  292  git checkout master
+  293  git pull origin master
+  294  git status
+  295  git add index.html 
+  296  git add js/main.js 
+  297  git status
+  298  git commit -m 'Add functionality to view swapper to update the title of the page, to the recipe title'
+  299  git checkout -b Issue-6-User-can-view-a-whole-recipe
+  300  git status
+  301  git add css/layout.css 
+  302  git add css/styles.css 
+  303  git add index.html 
+  304  git commit -m 'Create the styling for the recipe page onto the current applications recipe section | in progress'
+  305  git push origin Issue-6-User-can-view-a-whole-recipe
+  306  cd ..
+  307  ls
+  308  cd c0521-code-solutions/
+  309  git checkout master
+  310  git checkout -b es6-const-let
+  311  git status
+  312  git add es6-const-let/
+  313  git status
+  314  git commit -m 'es6-const-let | Cristofer Martinez'
+  315  git push origin es6-const-let
+  316  git checkout master
+  317  git pull origin master
+  318  git checkout -b es6-template-literals
+  319  git status
+  320  git add es6-template-literals/
+  321  git status
+  322  git commit -m es6-template-literals
+  323  git push origin es6-template-literals
+  324  git checkout master
+  325  git pull origin master
+  326  git checkout -b es6-destructuring
+  327  git status
+  328  git add es6-destructuring/
+  329  git status
+  330  git restore es6-template-literals/
+  331  git status
+  332  git commit -m 'es6-destructuring | Cristofer Martinez'
+  333  git push origin es6-destructuring 
+  334  git checkout master
+  335  git pull origin master
+  336  git status
+  337  git restore es6-destructuring/index.html
+  338  git status
+  339  git checkout -b es6-arrow-functions
+  340  git statsus
+  341  git status
+  342  git add es6-arrow-functions/
+  343  git status
+  344  git commit -m 'es6-arrow-functions'
+  345  git push origin es6-arrow-functions
+  346  git checkout master
+  347  git pull origin master
+  348  git checkout -b command-line-basics
+  349  cd ..
+  350  pwd
+  351  ls
+  352  cd c0521-code-solutions/
+  353  ls
+  354  cs command-line-basics/
+  355  cd command-line-basics/
+  356  ls
+  357  pwd
+  358  man man
+  359  man cat
+  360  man man
+  361  man cat
+  362  la
+  363  cat laziness.txt 
+  364  cat impatience.txt 
+  365  cat hubris.txt 
+  366  man cat
+  367  cat laziness.txt, impatience.txt, hubris.txt 
+  368  cat laziness.txt impatience.txt hubris.txt 
+  369  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  370  ls
+  371  cat three-virtues.txt 
+  372  man ls
+  373  ls -l
+  374  man ls
+  375  ls
+  376  ls -a
+  377  ls -F
+  378  ls
+  379  ls lfz-staff/
+  380  ls lfz-staff/ -a
+  381  ls lfz-staff/ -F
+  382  ls lfz-staff/ -aF
+  383  ls lfz-staff/ -aF > lfz-staff/contents.txt
+  384  ls
+  385  ls lfz-staff/
+  386  ls lfz-staff/contents.txt 
+  387  cat lfz-staff/contents.txt 
+  388  man pwd
+  389  pwd
+  390  pwd > i-was-here.txt
+  391  ls
+  392  cat i-was-here.txt 
+  393  man echo
+  394  scho 'hello, world1'
+  395  echo 'hello, World!'
+  396  echo 'hello, World!' > hello.txt
+  397  ls
+  398  cat hello.txt 
+  399  echo 'Hello, World!' > hello.txt
+  400  ls
+  401  cat hello.txt 
+  402  man touch
+  403  touch tag-youre-it.txt
+  404  ls
+  405  touch snoot/boop.txt
+  406  ls
+  407  ls snoot/
+  408  touch man
+  409  ls
+  410  rm man 
+  411  ls
+  412  man touch
+  413  man mkdir
+  414  mkdir parent
+  415  ls
+  416  mkdir parent/child/grandchild -p
+  417  ls parent
+  418  ls parent/child/
+  419  mkdir stepdad
+  420  ls
+  421  mkdir stepdad/stepson/stepkid
+  422  rm stepdad/
+  423  ls
+  424  rmdir stepdad/
+  425  ls
+  426  touch parent/child/grandchild/.gitkeep
+  427  ls parent/child/grandchild/
+  428  ls parent/child/
+  429  ls parent/child/grandchild/
+  430  ls parent/child/grandchild/ -a
+  431  man mv
+  432  ls
+  433  ls pokiemans/
+  434  mkdir pokemon
+  435  ls
+  436  mv pokiemans/ > pokemon/
+  437  mv pokiemans/ pokemon/
+  438  ls
+  439  ls pokemon/
+  440  ls
+  441  rm lol.txt 
+  442  la
+  443  ls
+  444  rm kill-me/
+  445  rm kill-me/ -r
+  446  ls
+  447  man cp
+  448  cp and-then.txt no-and-then.txt
+  449  ls
+  450  cat no-and-then.txt 
+  451  man history
+  452  history > command-history.txt
