@@ -19,19 +19,10 @@ if (action === 'read') {
   data.nextId++;
   saveData();
 } else if (action === 'update') {
-  for (const key in data.notes) {
-    if (key === process.argv[3]) {
-      data.notes[key] = process.argv[4];
-    }
-  }
+  data.notes[process.argv[3]] = process.argv[4];
   saveData();
-
 } else if (action === 'delete') {
-  for (const key in data.notes) {
-    if (key === process.argv[3]) {
-      delete data.notes[key];
-    }
-  }
+  delete data.notes[process.argv[3]];
   saveData();
 } else {
   console.log('Use any one of the following key words "read", "create", "update", or "delete"');
