@@ -10,7 +10,7 @@ const saveData = () => {
 
 const action = process.argv[2];
 
-if (action === 'read') { // done
+if (action === 'read') {
   for (const key in data.notes) {
     console.log(`${key}: ${data.notes[key]}`);
   }
