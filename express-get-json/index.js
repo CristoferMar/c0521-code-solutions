@@ -30,5 +30,5 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.listen(3000, () => {
-  // console.log("we're live on 3000");
+  console.log("we're live on 3000");
 });
