@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-let grades = {};
+const grades = {};
 let nextId = 1;
 
 app.use(express.json());
@@ -11,8 +11,8 @@ app.get('/api/grades', (req, res) => {
 
 app.post('/api/grades', (req, res) => {
   req.body.id = nextId;
+  grades[nextId] = req.body;
   nextId++;
-  grades = req.body;
   res.status(201).send(grades);
 });
 
