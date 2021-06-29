@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const allGrades = [];
 let grades = {};
+const allGrades = [];
 let nextId = 1;
 
 app.use(express.json());
