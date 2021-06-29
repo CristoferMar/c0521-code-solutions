@@ -17,15 +17,15 @@ function difference(first, second) {
   var trmSecond = second;
 
   for (var i = 0; i < first.length; i++) {
-    var post = 1;
+    var post = true;
     for (var s = 0; s < trmSecond.length; s++) {
       if (first[i] === trmSecond[s]) {
         trmSecond.splice(s, 1);
-        post = 0;
+        post = false;
         break;
       }
     }
-    if (post > 0) {
+    if (post === true) {
       difArray.push(first[i]);
     }
   }

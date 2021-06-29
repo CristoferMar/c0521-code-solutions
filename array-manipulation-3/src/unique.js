@@ -11,18 +11,18 @@
 
 function unique(array) {
   if (array.length === 0) { return []; }
-  var Unique = [array[0]];
+  var oneOfaKind = [array[0]];
   for (var i = 1; i < array.length; i++) {
-    var post = 1;
-    for (var s = 0; s < Unique.length; s++) {
-      if (array[i] === Unique[s]) {
-        post = 0;
+    var post = true;
+    for (var s = 0; s < oneOfaKind.length; s++) {
+      if (array[i] === oneOfaKind[s]) {
+        post = false;
         break;
       }
     }
-    if (post > 0) {
-      Unique.push(array[i]);
+    if (post === true) {
+      oneOfaKind.push(array[i]);
     }
   }
-  return Unique;
+  return oneOfaKind;
 }

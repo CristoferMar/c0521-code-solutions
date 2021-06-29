@@ -6,14 +6,14 @@
 function union(first, second) {
   var united = first;
   for (var s = 0; s < second.length; s++) {
-    var push = 1;
+    var push = true;
     for (var i = 0; i < first.length; i++) {
       if (second[s] === first[i]) {
-        push = 0;
+        push = false;
         break;
       }
     }
-    if (push > 0) {
+    if (push === true) {
       united.push(second[s]);
     }
   }
