@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
+<<<<<<< HEAD
 const grades = {};
+=======
+let grades = {};
+const allGrades = [];
+>>>>>>> origin/master
 let nextId = 1;
 
 app.use(express.json());
