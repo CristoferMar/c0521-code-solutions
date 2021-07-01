@@ -7,5 +7,5 @@ coinFlip.then(value => {
 });
 
 coinFlip.catch(err => {
-  console.error(err.toString());
+  console.log(err.message);
 });
