@@ -34,7 +34,7 @@ app.get('/api/grades/:gradeId', (req, res) => {
     return;
   }
   const gradeId = parseInt(req.params.gradeId);
-  if (!(gradeId.toString().length === req.params.gradeId.length && gradeId > 0)) {
+  if (!(gradeId == req.params.gradeId && gradeId > 0)) {
     res.status(400).json({ error: 'gradeId must be a positive integer' });
     return;
   }
@@ -66,7 +66,7 @@ app.post('/api/grades', (req, res) => {
     return;
   }
   const score = parseInt(req.body.score);
-  if (!(score.toString().length === req.body.score.length && score > 0)) {
+  if (!(score == req.body.score && score > 0)) {
     res.status(400).json({ error: 'score must be a positive integer' });
     return;
   }
@@ -101,8 +101,8 @@ app.put('/api/grades/:gradeId', (req, res) => {
   }
   const gradeId = parseInt(req.params.gradeId);
   const score = parseInt(req.body.score);
-  if (!((score.toString().length === req.body.score.length && score > 0) &&
-  (gradeId.toString().length === req.params.gradeId.length && gradeId > 0))) {
+  if (!((score == req.body.score && score > 0) &&
+    (gradeId == req.params.gradeId && gradeId > 0))) {
     res.status(400).json({ error: 'gradeId & score must be a positive integers' });
     return;
   }
@@ -133,7 +133,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
 app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = parseInt(req.params.gradeId);
-  if (!(gradeId.toString().length === req.params.gradeId.length && gradeId > 0)) {
+  if (!(gradeId == req.params.gradeId && gradeId > 0)) {
     res.status(400).json({ error: 'gradeId must be a positive integers' });
     return;
   }
