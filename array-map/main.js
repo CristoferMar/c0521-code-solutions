@@ -8,7 +8,7 @@ const languages = [
   'Structured Query Language'
 ];
 
-const doubled = numbers.map(x => x * 2);
-const price = numbers.map(x => `$${x}.00`);
-const upperCased = languages.map(x => x.toUpperCase());
-const firstLetters = languages.map(x => x.charAt(0));
+const doubled = numbers.map(number => number * 2);
+const price = numbers.map(number => `$${number}.00`);
+const upperCased = languages.map(language => language.toUpperCase());
+const firstLetters = languages.map(language => language.charAt(0));
