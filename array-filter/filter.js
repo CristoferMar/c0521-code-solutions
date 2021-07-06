@@ -1,14 +1,10 @@
-const billing = (array, item, condition) => {
+const filter = (array, condition) => {
   const match = [];
   for (let i = 0; i < array.length; i++) {
-    item = array[i];
-    if (condition) {
+    const item = array[i];
+    if (condition(item)) {
       match.push(item);
     }
   }
   return match;
 };
-
-function array(method) {
-  this.method;
-}
