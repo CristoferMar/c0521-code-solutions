@@ -1,0 +1,40 @@
+.switchBox {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: solid lightgray 1px;
+  background-color: white;
+  position: relative;
+}
+
+.right {
+  left: 28px;
+}
+
+.oval {
+  height: 42px;
+  width: 70px;
+  background-color: rgb(48, 165, 48);
+  border-radius: 50px;
+}
+
+.green {
+  background-color: rgb(48, 165, 48);
+}
+
+.grey {
+  background-color: lightgrey;
+}
+
+.word {
+  margin: auto;
+  width: 55px;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
