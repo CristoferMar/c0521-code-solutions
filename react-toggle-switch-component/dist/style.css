@@ -1,11 +1,7 @@
 .switchBox {
-  width: 160px;
-  padding: 20px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
-
-  /* Remove border: */
-  border: solid black 1px;
 }
 
 .circle {
