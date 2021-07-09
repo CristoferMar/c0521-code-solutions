@@ -1,0 +1,39 @@
+button {
+  width: 100px;
+  height: 45px;
+  border: solid black 2px;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.cold {
+  background-color: rgb(30, 0, 138);
+  color: white;
+}
+
+.cool {
+  background-color: rgb(88, 35, 156);
+  color: white;
+}
+
+.warm {
+  background-color: rgb(224, 56, 5);
+  color: white;
+}
+
+.hot {
+  background-color: orange;
+  color: black;
+}
+
+.burning {
+  background-color: rgb(241, 241, 0);
+  color: black;
+}
+
+.whiteDwarf {
+  background-color: rgb(243, 243, 243);
+  color: black;
+}
