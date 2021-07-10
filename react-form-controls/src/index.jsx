@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class NewsletterForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: 'email' };
+    this.state = { email: 'yum yum' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,7 +22,7 @@ class NewsletterForm extends React.Component {
     return (
     <form action="">
         Email
-        <input type="text" onChange={this.handleChange} />
+        <input type="text" onChange={this.handleChange} value={this.state.email} />
         <button onClick={this.handleSubmit}>Sign Up</button>
     </form>
     );
