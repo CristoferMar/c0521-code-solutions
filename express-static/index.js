@@ -4,8 +4,6 @@ const app = express();
 
 const absolutePath = path.join(__dirname, 'public');
 
-console.log(absolutePath);
-
 const staticFile = app.use(express.static(absolutePath));
 
 app.listen(3000, () => {
