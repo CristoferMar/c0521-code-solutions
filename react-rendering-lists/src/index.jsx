@@ -9,11 +9,15 @@ const pokedex = [
   { number: '039', name: 'Jigglypuff' }
 ];
 
-const listItems = pokedex.map(pokemon =>
-  <li key={pokemon.number}>{pokemon.name}</li>
-);
+function GenerateLIs(props) {
+  const pokedex = props.pokedex;
+  const listItems = pokedex.map(pokemon =>
+    <li key={pokemon.number}>{pokemon.name}</li>
+  );
+  return <ul>{listItems}</ul>;
+}
 
 ReactDOM.render(
-  <ul>{listItems}</ul>,
+  <GenerateLIs pokedex={pokedex} />,
   document.querySelector('#root')
 );
