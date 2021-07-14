@@ -9,9 +9,6 @@ function authorizationMiddleware(req, res, next) {
   }
 
   const pulledPayload = jwt.verify(currentToken, process.env.TOKEN_SECRET);
-  if (!pulledPayload) {
-    throw new ClientError(401, 'invalid access token');
-  }
 
   req.user = pulledPayload;
   next();
