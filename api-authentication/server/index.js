@@ -67,7 +67,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
           } else {
 
             const payload = { userId: response.rows[0].userId, username: username };
-            const token = jwt.sign(payload, 'randomtext12345');
+            const token = jwt.sign(payload, process.env.TOKEN_SECRET);
             const wholeResponse = { token: token, user: payload };
             res.status(200).json(wholeResponse);
           }
