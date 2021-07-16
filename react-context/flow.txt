@@ -1,0 +1,136 @@
+In index.jsx, we are calling the render method of the ReactDOM object,
+with the indent of adding an <App /> element to our index.html’s div#root.
+
+In the app.jsx, we have a class named App, which has a constructor passing
+all the necessary props from wherever App is called, at a later time.
+App’s constructor method sets the state of the object being created as no
+user, automatically authorized, and a route object.
+
+The route's value is the return of the parseRoute() which will be the path
+(before the ?) and queryString (anything after the ?) which is an object
+containing arrays of all the key value pairs.
+(exp: name=bill&age=50 >> { [“name”, “bill”], [“age”, “50”] } )
+
+The App class renders a global contextValue object named AppContext, which we
+can send to any module as long as they deconstruct what they need from this.context.
+
+The App’s render method calls the this.renderPage() method. The renderPage
+method is deciding which page we will render, based on this.state.route.path.
+At first, because the path is an empty string, we return the <Home /> element
+to the index.jsx, to be rendered to the screen. This requires the use of the
+home.jsx module.
+
+In home.jsx, we check the status of the content we imported with AppContext.
+Now, the this of class Home contains context which was exported from App.
+Because there is currently no user in this.context.user, we return
+the <Redirect /> element with a prop of { to: “sign-in”}.
+
+In redirect.jsx, we are constructing a new URL object with the current
+window.location. Then, we are changing the URL’s hash property to the value of
+the prop to (“sign-in”). Once that is done, we are assigning the current
+window.location to the new URL we made, with the updated hash. This is
+effectively changing what we view on the screen to the #sign-in page.
+
+I don’t understand why we are back in app.jsx.
+Maybe we’re back here because the state of route changed?
+But now we are back in app.jsx and re-rendering the page, which is calling
+the this.renderPage method. But now, this.state.path is not equal to an
+empty string. It is now equal to “sing-up”. So, renderPage returns
+the <Auth /> element, from the auth.jsx file.
+
+In auth.jsx, we are pulling the data out of AppContext. Since the user is still
+null, we move on to generating the react elements of the page. Based on
+route.path being === “sign-in”, we are saying “Please Sign in”. If the path
+were “sign-up”,  we’d be saying “Make an account”. So, we start creating an
+element with the appropriate message for the user. Part of the process of
+making the element calls for the react element <AuthForm /> with the properties
+key, action, and onSignIn.
+
+In the auth-form.jsx we are importing the props passed from auth.jsx and giving
+the state object of the elements an empty username and an empty password. The
+render method of the class then generates the form needed, with the appropriate
+labels for signing in or creating an account. This form is being created with
+event listeners for change in the boxes and a button for submit. The created
+form gets returned to the auth.jsx file which then returns the entire sign-in
+page to renderPage method of the App class. Then the element gets inserted into
+the return of the render of App. We now have a sign in page on the screen.
+
+The user clicks Sign-up, causing the this.state.route to change, triggering the
+componentDidMount() of the Apps class to run again. The Apps class goes through
+the same steps as before, but this time, the final elements being rendered are
+labeled oppositely, for signing up. The user inputs their username and password,
+triggering the onChange events of the form, causing the value of the form input
+elements to update as the user types.
+
+There is a prop being passed to the form element called action. This prop’s
+value is based on the pathway the user is currently on.
+
+User can sign up:
+When the user hits “Register”, a fetch request is called with the POST method,
+to the URL “/api/auth/${action}”, in this case, the url would be
+“/api/auth/sign-up”. This goes over to the server, to index.js. There, we are
+using express to manage the request.
+1) First we check if the request’s body property has a username and a password.
+2) Then, we hash the password with the argon2 object.
+3) When the has method is done, we insert into the database the username and
+the hashed passwords, using params, of course.
+4) This same SQL command returns the userId, username, and the time of creation
+5) When that sql query is done, we send a 201 status code to the user and
+provide them with the info we returned from SQL.
+6) If any of those promises fail, the rejection is caught and the terminal
+is sent an error.
+
+User can sign in:
+While on the sign-in page, the user can input their username and credentials
+into the form, and hit submit. When that occurs, the same fetch request as Sign
+Up is generated, but this time, the URL reads “/api/auth/sign-in”.
+1) Index.js received the request and checks the body to see if there is a
+username and password.
+2) It makes a SQL command to select the userId and hashed password from the
+users table where the username matches that of the req.body.
+3) When that database query is completed, the response is checked to see if
+there is a resulting user from SQL.
+    -If not, then it tells the client “invalid login”
+4) The verify method of the argon2 object is called, comparing the hashed
+password to the password the user input.
+5) When that is completed, if it is matching, we make a payload object,
+with the userId and username
+6) We make a token for this user to access their account, with the use of
+jwt.sign. The arguments being the payload object and the selected token phrase from out env
+7) We send out a json object with the token property with a value of itself
+and the user property with the value of the payload object we made.
+8) When this is done, and returned, the next chained then method from the fetch request runs
+9) In it, if the result user and if the result token exist, we run the onSignin.
+The onSignIn prop has a value of handleSignIn from auth.jsx, which is a function from Apps.
+10) The result of the POST request, which is the user and their token, is passed
+into handleSignIn as an argument.
+11) In the handleSignIn function, we are deconstructing the result object, saving
+the token into the users local storage, and setting the state as the user object.
+12) Now, since the state has been updated, the page will re-render. But this
+time, user is not null
+13) So, the this.renderPage method is called in the render function but now
+that the path is an empty string, we return the <Home /> element.
+14) User is no longer false, so we return a div back to the app.jsx, and it
+gets rendered to the DOM. Then we get rick rolled right in the face
+
+User can stay signed in (even if they refresh the page).
+1) When the page refreshes, we still go through the entire initial render process,
+where if the url has a blank #, then it is driven to the home, screen, unless there is no user.
+2) On the componentDidMount method, of app.jsx, we are getting the locally stored
+info before the screen gets put on the DOM & if the token exists, we decode it
+and change the state of isAuthorizing to false, forcing the page to rerender,
+with the token now existing.
+3) So we are effectively just creating the page again, with the existence of a
+user and their token, from local storage
+
+User can sign out.
+Navbar:
+1) The navbar, is generated in the same time render() is being run in app.jsx
+2) Navbar’s components are laid out in navbar.jsx, where if the user is
+null (does not exist), two anchor tags are generated, looking like buttons,
+which have the hrefs of #sign-in and #sign-out
+3) If the user exists, a button is created, which listends of the onClick event,
+running the handleSignOut method from app.jsx
+4) In app.jsx, the handleSignOut method removed the locatlStorage of the user, on the computer
+5) Then it sets the this.state.user = null, triggering a re-render of the whole page.
+6) Since user no longer exists, we are sent to the default sign-up page
