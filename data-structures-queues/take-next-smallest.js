@@ -2,7 +2,7 @@
 
 function takeNextSmallest(queue) {
   let item = queue.dequeue();
-  while (item > queue.peek()) {
+  while (item >= queue.peek()) {
     queue.enqueue(item);
     item = queue.dequeue();
   }
